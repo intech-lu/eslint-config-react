@@ -1,0 +1,56 @@
+{
+  "name": "@intech.lu/eslint-config-react",
+  "version": "1.0.0",
+  "description": "ESLint rules for InTech React projects",
+  "keywords": [
+    "style guide",
+    "lint",
+    "eslint",
+    "prettier",
+    "format",
+    "intech",
+    "react",
+    "jsx",
+    "tsx"
+  ],
+  "author": "InTech S.A. <equipe.titane@intech.lu> (https://www.intech.lu)",
+  "contributors": [
+    {
+      "name": "Tristan Chaumont",
+      "email": "tristan.chaumont@intech.lu"
+    },
+    {
+      "name": "Loïc Gasiorowski",
+      "email": "loic.gasiorowski@intech.lu"
+    },
+    {
+      "name": "Silvio Brancati",
+      "email": "silvio.brancati@intech.lu"
+    },
+    {
+      "name": "Jacques Vernay",
+      "email": "jacques.vernay@intech.lu"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/intech-lu/eslint-config-react"
+  },
+  "homepage": "https://github.com/intech-lu/eslint-config-react",
+  "license": "MIT",
+  "files": [
+    "eslint.config.mjs"
+  ],
+  "main": "eslint.config.mjs",
+  "dependencies": {
+    "@intech.lu/eslint-config": "^1.0.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0"
+  },
+  "peerDependencies": {
+    "eslint": "^9.35.0"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}
