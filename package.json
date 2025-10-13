@@ -1,6 +1,6 @@
 {
   "name": "@intech.lu/eslint-config-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ESLint rules for InTech React projects",
   "keywords": [
     "style guide",
@@ -43,12 +43,12 @@
   ],
   "main": "eslint.config.mjs",
   "dependencies": {
-    "@intech.lu/eslint-config": "^1.0.0",
+    "@intech.lu/eslint-config": "^1.0.1",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^5.2.0"
+    "eslint-plugin-react-hooks": "^7.0.0"
   },
   "peerDependencies": {
-    "eslint": "^9.35.0"
+    "eslint": "^9.37.0"
   },
   "engines": {
     "node": ">=18.18.0"
