@@ -1,6 +1,6 @@
 {
   "name": "@intech.lu/eslint-config-react",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "ESLint rules for InTech React projects",
   "keywords": [
     "style guide",
@@ -14,6 +14,9 @@
     "tsx"
   ],
   "author": "InTech S.A. <equipe.titane@intech.lu> (https://www.intech.lu)",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "contributors": [
     {
       "name": "Tristan Chaumont",
@@ -43,7 +46,7 @@
   ],
   "main": "eslint.config.mjs",
   "dependencies": {
-    "@intech.lu/eslint-config": "^1.0.1",
+    "@intech.lu/eslint-config": "^1.0.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.0"
   },
