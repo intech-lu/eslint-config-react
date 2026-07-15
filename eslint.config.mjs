@@ -1,14 +1,14 @@
 import eslintConfig from '@intech.lu/eslint-config';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
+import eslintReact from '@eslint-react/eslint-plugin';
+import stylistic from '@stylistic/eslint-plugin';
 import { defineConfig } from 'eslint/config';
 
 export default defineConfig(
   ...eslintConfig,
   {
-    files: ["**/*.{jsx,tsx,mjsx,mtsx}"],
+    files: ["**/*.{js,ts,jsx,tsx,mjsx,mtsx}"],
     extends: [
-      react.configs.flat.recommended,
+      eslintReact.configs["recommended-typescript"],
     ],
     languageOptions: {
       parserOptions: {
@@ -17,39 +17,32 @@ export default defineConfig(
         }
       }
     },
-    settings: {
-      react: {
-        version: 'detect',
-      }
-    },
     plugins: {
-      'react-hooks': reactHooks,
+      '@stylistic': stylistic,
     },
     rules: {
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-      'react/button-has-type': 'error',
-      'react/no-array-index-key': 'error',
-      'react/jsx-key': 'error',
-      'react/self-closing-comp': 'error',
-      'react/jsx-curly-brace-presence': 'error',
-      'react/no-this-in-sfc': 'error',
-      'react/function-component-definition': [
-        'error',
-        {
-          namedComponents: 'arrow-function',
-        },
-      ],
-      'react/no-multi-comp': 'warn',
-      'react/destructuring-assignment': [
-        'error',
-        'always',
-        {
-          destructureInSignature: 'always',
-        },
-      ],
-      // This rules below requires the import of React but it's not compatible with InTechlux where an import cannot be not used
-      'react/react-in-jsx-scope': 'off',
+      '@eslint-react/rules-of-hooks': 'error',
+      '@eslint-react/exhaustive-deps': 'warn',
+
+      '@eslint-react/dom-no-missing-button-type': 'error',
+      '@eslint-react/no-array-index-key': 'error',
+      '@eslint-react/no-missing-key': 'error',
+      '@eslint-react/no-duplicate-key': 'error',
+
+      '@stylistic/jsx-self-closing-comp': 'error',
+      '@stylistic/jsx-curly-brace-presence': 'error',
     }
+  },
+  {
+    // no-implicit-key needs type information, only available on TypeScript-parsed files.
+    files: ["**/*.ts", "**/*.tsx", "**/*.mtsx"],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+      },
+    },
+    rules: {
+      '@eslint-react/no-implicit-key': 'error',
+    },
   }
 );
