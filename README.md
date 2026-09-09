@@ -18,7 +18,7 @@ Add the InTech ESLint Rules on your existing project.
 
 ### 📋 Requirements
 
-- Node.js version >= `v24.18.0`
+- Node.js version >= `v24.20.0`
 
 ### 1️⃣ Step 1: install the ESLint extension for VSCode
 
